@@ -1,0 +1,44 @@
+generated: '2026-07-19'
+method: searched
+source: https://developers.improvado.io/auth.md
+docs: https://developers.improvado.io/auth
+summary:
+  types: [http, apiKey, oauth2]
+  api_key_in: [cookie, header]
+  notes: >-
+    The Improvado Embedded API v3 uses HTTP Basic for workspace-agnostic
+    operations, HTTP Bearer tokens for workspace-scoped operations, and a
+    cookie-based alternative for browser integrations. The Improvado MCP
+    server authenticates with OAuth 2.0.
+schemes:
+  - name: basicAuth
+    type: http
+    scheme: basic
+    rfc: RFC 7617
+    usage: >-
+      Workspace management and obtaining a workspace token. Credentials are
+      provided by Improvado for Embedded API access. Invalid credentials
+      return 401 Unauthorized.
+    applies_to: [POST /api/v3/token, workspaces management]
+  - name: bearerToken
+    type: http
+    scheme: bearer
+    usage: >-
+      Workspace-scoped resources (connections, accounts, extractions, etc.).
+      Token is obtained from POST /api/v3/token. Token expiration is 30 minutes,
+      renewed on each authorized request.
+    token_ttl_seconds: 1800
+  - name: cookieAuth
+    type: apiKey
+    in: cookie
+    name: dts_session_id
+    usage: >-
+      Alternative for browser-based integrations. Requires the dts_session_id
+      cookie plus the X-IM-WORKSPACE-ID header.
+    companion_header: X-IM-WORKSPACE-ID
+  - name: oauth2
+    type: oauth2
+    usage: >-
+      OAuth 2.0 is used to authenticate the Improvado MCP server against a
+      customer's existing Improvado credentials.
+    applies_to: [MCP server]
