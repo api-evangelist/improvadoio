@@ -1,0 +1,58 @@
+generated: '2026-07-19'
+method: searched
+source: https://developers.improvado.io/llms.txt
+docs: https://developers.improvado.io/introduction
+authentication:
+  style: >-
+    HTTP Basic (workspace management + token issuance) then HTTP Bearer token
+    (workspace-scoped resources). Cookie auth (dts_session_id + X-IM-WORKSPACE-ID)
+    for browser integrations. See authentication/improvadoio-authentication.yml.
+  token_ttl_seconds: 1800
+workspace_scoping:
+  header: X-IM-WORKSPACE-ID
+  notes: >-
+    Most operations are workspace-scoped. After Basic auth, obtain a
+    workspace-specific token via POST /api/v3/token with the desired workspace_id.
+pagination:
+  style: page-number
+  docs: https://developers.improvado.io/pagination
+  params:
+    - name: page
+      default: 1
+      description: Page number to return.
+    - name: page_size
+      default: 100
+      description: Number of items per page.
+  response_fields:
+    - count
+    - next
+    - previous
+    - results
+  sort: Paginated responses are sorted by id.
+rate_limits:
+  documented: true
+  docs: https://developers.improvado.io/rate-limits
+  notes: >-
+    All API methods enforce rate limits (max requests per period). Exact values,
+    informational headers, and error shapes are noted by the docs as "described
+    later" — no concrete numeric limits are published yet.
+versioning:
+  scheme: uri-path
+  current: v3
+  notes: >-
+    Version carried in the URL path (/api/v3/...). Some newer operations are
+    exposed under /api/v3.1/ (e.g. POST /api/v3.1/extracts/).
+webhooks:
+  supported: true
+  signing: HMAC signing secret per endpoint, rotatable via regenerate_secret
+  verify: POST /api/v3/webhook_endpoints/{id}/verify/
+  see: asyncapi/improvadoio-webhooks.yml
+idempotency:
+  supported: false
+  notes: No idempotency-key header or contract is documented in the v3 API reference.
+error_handling:
+  see: Not published as a machine-readable catalog; auth failures return 401 Unauthorized.
+cross_links:
+  authentication: authentication/improvadoio-authentication.yml
+  lifecycle: lifecycle/improvadoio-lifecycle.yml
+  webhooks: asyncapi/improvadoio-webhooks.yml

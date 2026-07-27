@@ -1,0 +1,43 @@
+generated: '2026-07-19'
+method: searched
+source: https://developers.improvado.io/changelog
+scheme: dated
+current_version: v3
+entries:
+  - date: '2026-07-14'
+    breaking: false
+    highlights:
+      - Data table field selection control via PUT /api/v3/data-tables/{data_table_id}
+      - External authentication links for credential requests from external users
+  - date: '2026-06-15'
+    breaking: true
+    highlights:
+      - Extraction template validation now uses embedded account IDs (integers) instead of remote account ID strings
+      - New template_settings object wraps field and custom setting inputs
+      - Added extraction template detail retrieval endpoint
+  - date: '2026-06-05'
+    breaking: false
+    highlights:
+      - Wide report extract migration support via new endpoint
+      - Template validation pre-flight checks
+      - Added is_wide_template flag to extract responses
+  - date: '2026-05-21'
+    breaking: false
+    highlights:
+      - Roles & Permissions API for managing workspace roles and viewing the permission catalog
+  - date: '2026-05-05'
+    breaking: false
+    highlights:
+      - New enabled_for_extraction_accounts_number field on the connections list endpoint
+  - date: '2026-04-28'
+    breaking: false
+    highlights:
+      - Custom setting options endpoint for dynamic select-based extraction settings
+  - date: '2026-04-27'
+    breaking: false
+    highlights:
+      - Webhooks API with endpoint management and event notifications
+  - date: '2026-04-15'
+    breaking: false
+    highlights:
+      - Filter parameters (connection_id, datasource_name, data_table_id) added to list extracts endpoint

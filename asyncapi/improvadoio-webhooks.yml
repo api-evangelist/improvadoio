@@ -1,0 +1,29 @@
+generated: '2026-07-19'
+method: searched
+source: https://developers.improvado.io/llms.txt
+docs: https://developers.improvado.io/api
+type: Webhooks
+spec_type: none
+summary: >-
+  The Improvado Embedded API v3 documents a Webhooks API for receiving event
+  notifications from the platform. Endpoints are managed via the API and
+  secured with a per-endpoint HMAC signing secret. No AsyncAPI document is
+  published; this captures the webhook surface.
+management_operations:
+  - GET /api/v3/webhook_endpoints/
+  - POST /api/v3/webhook_endpoints/
+  - GET /api/v3/webhook_endpoints/{id}/
+  - PATCH /api/v3/webhook_endpoints/{id}/
+  - DELETE /api/v3/webhook_endpoints/{id}/
+  - POST /api/v3/webhook_endpoints/{id}/verify/
+  - POST /api/v3/webhook_endpoints/{id}/regenerate_secret/
+  - GET /api/v3/webhook_event_types/
+security:
+  signing: HMAC per-endpoint signing secret
+  rotation: POST /api/v3/webhook_endpoints/{id}/regenerate_secret/
+  verification: POST /api/v3/webhook_endpoints/{id}/verify/
+event_types:
+  note: >-
+    Available event types are enumerated at runtime via
+    GET /api/v3/webhook_event_types/. The docs do not publish a static list.
+introduced: '2026-04-27'

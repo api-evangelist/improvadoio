@@ -1,0 +1,54 @@
+generated: '2026-07-19'
+method: searched
+status: published
+source: https://improvado.io/docs-section-topic/improvado-mcp
+server:
+  name: improvado
+  transport: http
+  protocol: JSON-RPC 2.0
+  url: https://report.improvado.io/experimental/agent/api/mcp-customer/v1/invoke
+  authentication: OAuth 2.0 (existing Improvado credentials; no separate API keys)
+  description: >-
+    Official Improvado MCP server. A secure proxy that exposes the Improvado
+    marketing-data platform (500+ connectors, governed transformations,
+    real-time analytics) to AI agents. The MCP layer acts as an authenticated
+    intermediary with no direct API access from the AI layer.
+clients:
+  - Claude Desktop
+  - Claude Code
+  - ChatGPT App
+  - OpenAI Codex / Codex CLI
+  - Google Gemini CLI
+  - Antigravity
+  - Any MCP client supporting JSON-RPC 2.0
+tool_categories:
+  - name: Data Query & Visualization
+    count: 5
+    notes: ClickHouse SQL, destination queries, charts
+  - name: Discovery API
+    count: 5
+    notes: Live access to 1,000+ marketing platforms
+  - name: Connections & Accounts
+    count: 3
+  - name: Extract Management
+    count: 9
+    notes: Schedule, pause, and manage data pulls
+  - name: Load Management
+    count: 8
+    notes: Push data to destinations
+  - name: Pipeline Runs
+    count: 4
+  - name: Custom Pipelines
+    count: 6
+  - name: Marketing Data Governance
+    count: 7
+    notes: Naming rules, budget enforcement
+  - name: AI Recipes / Notebooks
+    count: 13
+  - name: Dashboards
+    count: 3
+  - name: Documents & Chat
+    count: 11
+  - name: Workspace & Protocol
+    count: 9
+tool_count: 84

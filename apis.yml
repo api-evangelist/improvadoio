@@ -1,7 +1,15 @@
 aid: improvadoio
 name: Improvado.io
-description: Improvado.io is a company surfaced as a portfolio company of 500-global and added to the
-  API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Improvado is an AI-powered marketing intelligence and data platform that
+  connects, unifies, and governs marketing data across 500+ advertising,
+  analytics, and CRM sources. Its Embedded API v3 gives platforms and agencies
+  programmatic control over data sources, connections, accounts, extraction
+  templates, extracts, destinations, loads, data tables, recipes, roles, and
+  webhooks — letting them extract, transform, and load marketing data into any
+  destination. Improvado also ships an official MCP server exposing 84 tools
+  (data query, discovery, extract/load management, governance, AI recipes,
+  dashboards) so AI agents can operate the platform directly.
 url: https://raw.githubusercontent.com/api-evangelist/improvadoio/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -9,17 +17,122 @@ x-backed-by:
 - 500-global
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
+image: https://improvado.io/logo_light.png
 tags:
 - Company
-apis: []
+- Marketing
+- Analytics
+- Data Integration
+- ETL
+- Marketing Intelligence
+- Data Pipeline
+- MCP
+- Webhooks
+apis:
+- name: Improvado Embedded API v3
+  description: >-
+    Programmatic access to Improvado's data extraction, transformation, and
+    loading capabilities — data sources, connections, accounts, extraction
+    templates, extracts, destinations, loads, data tables, recipes, roles,
+    and webhooks. Workspace-scoped with Basic + Bearer token authentication.
+  humanURL: https://developers.improvado.io/api
+  baseURL: https://embedded.improvado.io/api/v3
+  properties:
+  - type: Documentation
+    url: https://developers.improvado.io/introduction
+  - type: APIReference
+    url: https://developers.improvado.io/api
+  - type: GettingStarted
+    url: https://developers.improvado.io/introduction
+  - type: Authentication
+    url: authentication/improvadoio-authentication.yml
+  - type: Conventions
+    url: conventions/improvadoio-conventions.yml
+  - type: Webhooks
+    url: asyncapi/improvadoio-webhooks.yml
+  - type: ChangeLog
+    url: changelog/improvadoio-changelog.yml
+  - type: Lifecycle
+    url: lifecycle/improvadoio-lifecycle.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: TrustCenter
+  url: security/improvadoio-trust-center.yml
+- type: VulnerabilityDisclosure
+  url: security/improvadoio-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/improvadoio-domain-security.yml
 - type: Website
   url: https://improvado.io
+- type: DeveloperPortal
+  url: https://developers.improvado.io
+- type: Documentation
+  url: https://developers.improvado.io/introduction
+- type: APIReference
+  url: https://developers.improvado.io/api
+- type: GettingStarted
+  url: https://developers.improvado.io/introduction
+- type: Support
+  url: https://improvado.io/help
+- type: Blog
+  url: https://improvado.io/blog
+- type: Pricing
+  url: https://improvado.io/pricing
+- type: Login
+  url: https://report.improvado.io/login
+- type: SignUp
+  url: https://improvado.io/get-demo
+- type: TermsOfService
+  url: https://improvado.io/terms
+- type: PrivacyPolicy
+  url: https://improvado.io/privacy-policy
+- type: ChangeLog
+  url: https://developers.improvado.io/changelog
+- type: StatusPage
+  url: https://status.improvado.io
+- type: Compliance
+  url: https://trust.improvado.io
+- type: Security
+  url: https://improvado.io/company-legal/responsible-disclosure-policy
+- type: MCPServer
+  url: mcp/improvadoio-mcp.yml
+- type: LLMsTxt
+  url: llms/improvadoio-llms.txt
+- type: WellKnown
+  url: well-known/improvadoio-well-known.yml
+- type: SecurityTxt
+  url: well-known/improvadoio-security.txt
+- type: Authentication
+  url: authentication/improvadoio-authentication.yml
+- type: Conventions
+  url: conventions/improvadoio-conventions.yml
+- type: Webhooks
+  url: asyncapi/improvadoio-webhooks.yml
+- type: Conformance
+  url: conformance/improvadoio-conformance.yml
+- type: Lifecycle
+  url: lifecycle/improvadoio-lifecycle.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

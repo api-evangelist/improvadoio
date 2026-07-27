@@ -1,0 +1,44 @@
+generated: '2026-07-19'
+method: searched
+source: https://trust.improvado.io
+compliance_program:
+  trust_center: https://trust.improvado.io
+  powered_by: SafeBase (Drata)
+  certifications:
+    - SOC 2 Type 2
+    - HIPAA
+    - GDPR
+    - CCPA
+  controls:
+    - Penetration testing
+    - Audit logging
+    - Data Flow and Network Diagrams
+    - Business continuity (RTO 4h / RPO 2h)
+standards:
+  - id: oauth2
+    conforms: true
+    evidence: Improvado MCP server authenticates with OAuth 2.0
+  - id: http-basic-rfc7617
+    conforms: true
+    evidence: Embedded API v3 uses HTTP Basic (RFC 7617) for workspace auth
+  - id: http-bearer
+    conforms: true
+    evidence: Bearer token auth for workspace-scoped resources
+  - id: soc2-type2
+    conforms: true
+    evidence: Listed on trust.improvado.io
+  - id: hipaa
+    conforms: true
+    evidence: Listed on trust.improvado.io
+  - id: gdpr
+    conforms: true
+    evidence: Listed on trust.improvado.io
+  - id: ccpa
+    conforms: true
+    evidence: Listed on trust.improvado.io
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: No application/problem+json error catalog published
+  - id: rfc9116-security-txt
+    conforms: true
+    evidence: /.well-known/security.txt present on improvado.io

@@ -1,0 +1,21 @@
+generated: '2026-07-19'
+method: searched
+source: https://developers.improvado.io/changelog
+versioning:
+  scheme: uri-path
+  current: v3
+  docs: https://developers.improvado.io/introduction
+  notes: >-
+    Version in URL path (/api/v3/...); some operations under /api/v3.1/.
+deprecation:
+  policy_url: null
+  sunset_header: false
+  notes: >-
+    No formal deprecation/sunset policy is published. Breaking changes are
+    announced in the dated changelog (e.g. the 2026-06-15 extraction-template
+    validation change).
+sla:
+  url: null
+  uptime_target: null
+status_page: https://status.improvado.io
+changelog: https://developers.improvado.io/changelog

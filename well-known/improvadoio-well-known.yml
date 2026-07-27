@@ -1,0 +1,19 @@
+generated: '2026-07-19'
+method: searched
+source: probed /.well-known/ on improvado.io and embedded.improvado.io
+hosts:
+  - host: https://improvado.io
+    documents:
+      - path: /.well-known/security.txt
+        status: 200
+        file: improvadoio-security.txt
+      - path: /.well-known/ai-plugin.json
+        status: 404
+  - host: https://embedded.improvado.io
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
