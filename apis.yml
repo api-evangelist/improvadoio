@@ -42,6 +42,16 @@ tags:
 - Marketing Intelligence
 - Data Pipeline
 - MCP
+- Webhook
+tags_raw:
+- Company
+- Marketing
+- Analytics
+- Data Integration
+- ETL
+- Marketing Intelligence
+- Data Pipeline
+- MCP
 - Webhooks
 apis:
 - name: Improvado Embedded API v3
